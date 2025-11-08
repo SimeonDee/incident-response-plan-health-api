@@ -186,6 +186,15 @@ The project uses Alembic for database migrations. Migration files are in the `al
 
 The migration system uses your SQLAlchemy models from `app/models.py` to detect schema changes.
 
+#### First-time setup
+
+If you have existing tables (created by `Base.metadata.create_all()`), you can start using Alembic without applying the initial migration:
+
+```bash
+alembic stamp head  # marks existing tables as migrated
+```
+
+Then create new migrations for future schema changes.
 
 #### Running migrations
 
@@ -209,16 +218,6 @@ alembic revision --autogenerate -m "describe your changes"
 ```bash
 alembic downgrade -1
 ```
-
-#### First-time setup
-
-If you have existing tables (created by `Base.metadata.create_all()`), you can start using Alembic without applying the initial migration:
-
-```bash
-alembic stamp head  # marks existing tables as migrated
-```
-
-Then create new migrations for future schema changes.
 
 #### Migration files
 
@@ -254,10 +253,12 @@ Base URL: `/api/v1`
 - **POST** `/incidents/`
   ```json
   {
-    "type": "Medication Error",
+    "incident_type": "Medication Error",
     "description": "Wrong medication dosage administered",
     "location": "Ward A",
-    "status": "pending"
+    "date_time": "2025-11-08T00:24:54.509Z",
+    "severity_level": "high",
+    "contact_information": "07011111111"
   }
   ```
 
