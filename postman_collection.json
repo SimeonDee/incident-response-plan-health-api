@@ -1,0 +1,59 @@
+{
+    "info": {
+        "_postman_id": "incident-response-sample",
+        "name": "Incident Response API - Sample",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Incident",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"incident_type\": \"Test\",\n  \"description\": \"Sample from Postman\",\n  \"location\": \"Ward B\",\n  \"date_time\": \"2025-11-08T12:00:00Z\",\n  \"severity_level\": \"low\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/v1/incidents/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "incidents",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "List Incidents",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/api/v1/incidents/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "incidents",
+                        ""
+                    ]
+                }
+            }
+        }
+    ]
+}
