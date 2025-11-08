@@ -1,7 +1,7 @@
 # Incident Response Plan Health API
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.68.0+-blue.svg)](https://fastapi.tiangolo.com)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0+-green.svg)](https://www.sqlalchemy.org/)
 [![Alembic](https://img.shields.io/badge/Alembic-1.7+-yellow.svg)](https://alembic.sqlalchemy.org/)
 
@@ -56,7 +56,7 @@ This README documents how to set up, configure, run, and develop the backend. It
 ## 🛠 Technology Stack
 
 - **Core Framework**
-  - Python 3.10+
+  - Python 3.12+
   - FastAPI 0.68.0+
   - Uvicorn (ASGI server)
 
